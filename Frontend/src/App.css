@@ -1,0 +1,20 @@
+.google-login-button-container {
+  width: 100%;
+  margin-top: 1rem; /* Adjust the top margin if needed */
+}
+
+.google-login-button-container .google-login-button {
+  width: 100%; /* Ensure the button takes full width of its container */
+  display: flex; /* Align items properly */
+  justify-content: center; /* Center the button horizontally */
+}
+
+.dropdown{
+  color: white !important;
+  margin-left: 4px;
+}
+
+.log1:hover{
+  transform: scale(1.1);
+  transition: ease-in 1s;
+}
