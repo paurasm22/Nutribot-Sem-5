@@ -21,7 +21,7 @@ export const addToCart = async(req,res)=>{
   }
 
   await cart.save()
-  res.json({message:"Items Added To Cart ! ",cart})
+  res.json({message:"Item Added To Cart ! ",cart})
 }
 
 //user specific cart

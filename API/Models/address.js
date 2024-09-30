@@ -9,7 +9,6 @@ const addressSchema  = new mongoose.Schema({
   country:{type:String,require:true},
   pincode:{type:String,require:true},
   phoneNumber:{type:String,require:true},
-  dileveryAt:{type:String,require:true},
   timeOfDilevery:{type:String,require:true},
   createdAt:{type:Date,default:Date.now},
 

@@ -7,6 +7,7 @@ const Subscriptions = () => {
   const handleBuy = async (plantype, total) => {
     console.log("Plan Type:", plantype);
     console.log("Total Prompts:", total);
+
     const purchase = await purchaseSubscription(plantype, total);
     console.log("Game over bhai !", purchase);
   };

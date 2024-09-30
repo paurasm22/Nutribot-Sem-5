@@ -1,9 +1,9 @@
 import { Address } from '../Models/address.js'
 
 export const addAddress = async(req,res)=>{
-  let {fullname,address,city,state,country,pincode,phoneNumber,dileveryAt,timeOfDilevery} = req.body
+  let {fullname,address,city,state,country,pincode,phoneNumber,timeOfDilevery} = req.body
   let userId = req.user;
-  let userAddress  = await Address.create({userId,fullname,address,city,state,country,pincode,phoneNumber,dileveryAt,timeOfDilevery})
+  let userAddress  = await Address.create({userId,fullname,address,city,state,country,pincode,phoneNumber,timeOfDilevery})
   res.json({message:"Address Added !",userAddress , sucess:true})
 
 }

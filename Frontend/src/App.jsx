@@ -22,17 +22,26 @@ import OrderHistory from "./Components/OrderHistory";
 import Profile from "./Components/Profile";
 import Recipedetails from "./Components/Recipedetails";
 import NutrimealsShow from "./Components/Nutrimeals/NutrimealsShow";
-
+import MealDetails from "./Components/Nutrimeals/MealDetails";
+import Cart from "./Components/Nutrimeals/Cart";
+import Shipping from "./Components/Nutrimeals/Shipping";
+import Checkout from "./Components/Nutrimeals/Checkout";
+import OrderConfirmation from "./Components/Nutrimeals/OrderConfirmation";
+import AllOrdersAdmin from "./Components/Admin/AllOrdersAdmin";
+import AboutPage from "./Components/AboutPage";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
       <BrowserRouter>
         <LandingNavbar />
         <Navbar />
+        <ToastContainer />
         <Routes>
           <Route path="/landingpage" element={<LangingPage />}></Route>
           <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" index element={<Login />} />
           <Route path="/" element={<MainPage />} />
           <Route path="/time" element={<Timeinput />} />
           <Route path="/ingridients" element={<Ingridients />} />
@@ -45,6 +54,13 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/recipedetails/:recipe_id" element={<Recipedetails />} />
           <Route path="/nutrimeals" element={<NutrimealsShow />} />
+          <Route path="/product/:id" element={<MealDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/shipping" element={<Shipping />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/orderconfirmation" element={<OrderConfirmation />} />
+          <Route path="/adminallorders" element={<AllOrdersAdmin />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </BrowserRouter>
     </>

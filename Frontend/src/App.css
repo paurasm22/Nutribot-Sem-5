@@ -14,7 +14,27 @@
   margin-left: 4px;
 }
 
-.log1:hover{
-  transform: scale(1.1);
-  transition: ease-in 1s;
+.log1 {
+  transition: transform 1s ease-in-out; /* Smooth transition on hover out */
 }
+
+.log1:hover {
+  transform: scale(1.1);
+  transition: transform 1s ease-in-out; /* Smooth transition on hover */
+}
+.numtrimeals {
+  /* transition: transform 1s ease-in-out; Smooth transition on hover out */
+}
+.numtrimeals:hover{
+  /* transform: scale(1.01); */
+  /* transition: transform 0.5s ease-in-out; */
+ box-shadow: 2px 5px 10px #888888;
+}
+
+
+/* .curver{
+  background-color: aqua;
+  height: 500px;
+  width: 100%;
+  border-radius: 0 0 100% 100% ;
+} */

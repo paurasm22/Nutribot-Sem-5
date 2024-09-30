@@ -1,5 +1,5 @@
 import express from 'express'
-import {allOrders, checkout,userOrder,verify,checkoutCOD} from '../Controller/payment.js'
+import {allOrders, checkout,userOrder,verify,checkoutCOD, updateOrderStatus} from '../Controller/payment.js'
 import { Authenticated } from '../Middleware/auth.js'
 const router = express.Router()
 
@@ -17,5 +17,8 @@ router.get('/userorder',Authenticated,userOrder)
 
 // get all orders (for admin)
 router.get('/allorders',allOrders)
+
+router.put('/update-order-status', updateOrderStatus);
+
 
 export default router;

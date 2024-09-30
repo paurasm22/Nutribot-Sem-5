@@ -7,25 +7,30 @@ const RecipeHistory = () => {
   const { recipeHistory } = useContext(AppContext);
   const [recHistory, setRecHistory] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await recipeHistory();
-        // Assuming the response is an array of recipes
-        setRecHistory(data || []); // Adjust based on your API response structure
-        console.log("History data", data);
-      } catch (error) {
-        console.error("Error fetching recipe history:", error);
-      }
-    };
+  useEffect(
+    () => {
+      const fetchData = async () => {
+        try {
+          const data = await recipeHistory();
+          // Assuming the response is an array of recipes
+          setRecHistory(data || []); // Adjust based on your API response structure
+          console.log("History data", data);
+        } catch (error) {
+          console.error("Error fetching recipe history:", error);
+        }
+      };
 
-    fetchData();
-  }, [recipeHistory]);
+      fetchData();
+    },
+    [
+      // recipeHistory
+    ]
+  );
 
   return (
     <div className="inside sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex flex-col justify-center items-center">
       <div className="text">
-        <h1 className="mt-5 text-5xl font-bold">Your Recipe History</h1>
+        <h1 className="mt-5 text-5xl font-bold"> Recipe History</h1>
       </div>
       <div className="container bg-gray-300 h-auto w-full p-5 mt-5 rounded-lg shadow-lg">
         {recHistory.length === 0 ? (
@@ -62,7 +67,8 @@ const RecipeHistory = () => {
               </button>
               <button
                 className="mt-4 ml-4 bg-blue-500 text-white px-4 py-2 rounded"
-                onClick={() => navigate(`/recipedetails/:${recipe._id}`)}
+                // onClick={() => addToCart(id, "Customized", price, 1, toblur)}
+                onClick={() => navigate(`/recipedetails/${recipe._id}`)}
               >
                 Add to cart
               </button>
