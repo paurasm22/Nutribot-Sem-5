@@ -2,12 +2,13 @@
 
 **NutriBot** is an AI-powered nutrition and diet recommendation platform. It helps users plan balanced meals, track dietary needs, and make healthier lifestyle choices with ease.  
 
-## ✨ Features  
-- **Personalized Meal Plans** – Tailored according to user preferences and health goals.  
-- **Calorie & Nutrient Tracking** – Monitors daily intake and balance.  
-- **Recipe Suggestions** – Smart recommendations based on available ingredients.  
-- **Payment Integration** – Razorpay for premium plans.  
-- **Chatbot Interface** – Conversational guidance for users.  
+🔹 Key Features:
+🌐 Google Authentication with OAuth
+💳 Razorpay Payment Integration for seamless transactions
+🤖 AI-powered recipe generation using Google Gemini, making recipe suggestions smarter and more accurate
+💡 A unique algorithm to accurately estimate recipe prices
+🛒 E-commerce theme where users can purchase generated recipes, backed by a planned cloud kitchen concept!
+🛠️ Powerful Admin Panel for effortless management
 
 ## 🛠️ Tech Stack  
 - **Frontend**: React / Next.js  
