@@ -4,11 +4,17 @@
 
 🔹 Key Features:
 🌐 Google Authentication with OAuth
+
 💳 Razorpay Payment Integration for seamless transactions
+
 🤖 AI-powered recipe generation using Google Gemini, making recipe suggestions smarter and more accurate
+
 💡 A unique algorithm to accurately estimate recipe prices
+
 🛒 E-commerce theme where users can purchase generated recipes, backed by a planned cloud kitchen concept!
+
 🛠️ Powerful Admin Panel for effortless management
+
 
 ## 🛠️ Tech Stack  
 - **Frontend**: React / Next.js  
