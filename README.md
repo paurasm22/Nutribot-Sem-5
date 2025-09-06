@@ -3,6 +3,7 @@
 **NutriBot** is an AI-powered nutrition and diet recommendation platform. It helps users plan balanced meals, track dietary needs, and make healthier lifestyle choices with ease.  
 
 🔹 Key Features:
+
 🌐 Google Authentication with OAuth
 
 💳 Razorpay Payment Integration for seamless transactions
