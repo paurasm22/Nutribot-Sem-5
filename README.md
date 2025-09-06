@@ -1,4 +1,4 @@
-# NutriBot 🍏🤖  
+# NutriBot 🤖  
 
 **NutriBot** is an AI-powered nutrition and diet recommendation platform. It helps users plan balanced meals, track dietary needs, and make healthier lifestyle choices with ease.  
 
@@ -16,9 +16,6 @@
 - **Payments**: Razorpay integration  
 - **APIs/ML Models**: Nutrition & health APIs  
 
-## 🚀 Getting Started  
+⚠️ **Note:** This project was created as a **Mini Project in 2024**. The provided **MongoDB connection string** and **Razorpay keys** may no longer be active. Please **replace them with your own valid credentials**  before running the project.  
 
-### 1️⃣ Clone the Repository  
-```bash
-git clone https://github.com/your-username/nutribot.git
-cd nutribot
+Watch the demo here: [LinkedIn Demo](<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7254895424967213056" height="898" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>)
