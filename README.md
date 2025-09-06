@@ -18,4 +18,4 @@
 
 ⚠️ **Note:** This project was created as a **Mini Project in 2024**. The provided **MongoDB connection string** and **Razorpay keys** may no longer be active. Please **replace them with your own valid credentials**  before running the project.  
 
-Watch the demo here: [LinkedIn Demo](<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7254895424967213056" height="898" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>)
+Watch the demo here: [LinkedIn Demo](https://www.linkedin.com/posts/pauras-more-2206pm_project-completed-nutribot-thrilled-activity-7254895717251481601-PNd3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEqyOdIBIu6Qx31XlWLP73KEUERrZHXOAvA)
