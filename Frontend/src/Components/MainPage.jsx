@@ -19,7 +19,7 @@ const MainPage = () => {
       setLoading(false); // Set loading to false when data is fetched
     };
     fetchDetails();
-  }); // Include getUserProfile in dependency array
+  },[]); // Include getUserProfile in dependency array
 
   useEffect(() => {
     // Calculate and update the progress percentage when userData changes

@@ -6,34 +6,57 @@ import { Bounce, toast } from "react-toastify";
 const AppState = (props) => {
   const url = "http://localhost:1000/api";
   const [userData, setUserData] = useState();
-  const [token, setToken] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [token, setToken] = useState("");
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [token, setToken] = useState(() => localStorage.getItem("token") || "");
+const [isAuthenticated, setIsAuthenticated] = useState(() => localStorage.getItem("IsAuthenticated") === "true");
+
   const [admin, setAdmin] = useState(false);
   const [recipe, setRecipe] = useState("");
   const [userDetails, setuserDetails] = useState();
 
   // handling token and auth
-  useEffect(() => {
-    const fetchToken = async () => {
-      const lstoken = localStorage.getItem("token");
-      const isauth = localStorage.getItem("IsAuthenticated");
-      // console.log("Token from localStorage inside useEffect:", lstoken);
-      if (lstoken) {
-        setToken(lstoken);
-        // setIsAuthenticated(true);
-        // No recursive call here
-      }
-    };
+  // useEffect(() => {
+  //   const fetchToken = async () => {
+  //     const lstoken = localStorage.getItem("token");
+  //     const isauth = localStorage.getItem("IsAuthenticated");
+  //     console.log('isauth',isauth)
+  //     // console.log("Token from localStorage inside useEffect:", lstoken);
+  //     if (lstoken) {
+  //       setToken(lstoken);
+  //       // setIsAuthenticated(true);
+  //       // No recursive call here
+  //     }
+  //     if (isauth === "true") {
+  //       setIsAuthenticated(true);
+  //     }
+  //   };
 
-    fetchToken();
-    // userProfile();
-    // getUserCart();
-    getProducts();
+  //   // userProfile();
+  //   // getUserCart();
+  //   getProducts();
+  //   // getUserProfile();
+  //   getAddress();
+  //   // fetchOrders();
+  //   // getAllOrders();
+  // }, [token,isAuthenticated]);
+
+  useEffect(() => {
+  // Initialization: runs only once
+  const lstoken = localStorage.getItem("token");
+  const isauth = localStorage.getItem("IsAuthenticated");
+  // if (lstoken) setToken(lstoken);
+  // if (isauth === "true") setIsAuthenticated(true);
+  getProducts();
+  getAddress();
+}, []);
+
+useEffect(() => {
+  // Fetch user profile only when token and isAuthenticated are set
+ 
     getUserProfile();
-    getAddress();
-    // fetchOrders();
-    // getAllOrders();
-  }, []);
+}, []);
+
 
   // useEffect(() => {
   //   if (token) {
@@ -75,10 +98,10 @@ const AppState = (props) => {
       localStorage.setItem("admin", response.data.admin);
       setAdmin(response.data.admin);
       setToken(response.data.token);
-      localStorage.setItem("token", response.data.token);
-      setIsAuthenticated(true);
-      localStorage.setItem("IsAuthenticated", true);
-
+      // localStorage.setItem("token", response.data.token);
+      // setIsAuthenticated(true);
+      // localStorage.setItem("IsAuthenticated", true);
+      // setIsAuthenticated(true);
       return response.data;
     } catch (error) {
       console.error("Error during login:", error);
@@ -110,7 +133,7 @@ const AppState = (props) => {
         },
         withCredentials: true,
       });
-      // console.log(api.data);
+      console.log(api.data);
       setUserData(api?.data);
       console.log("User details in appstate ", userData);
     } catch (error) {
@@ -444,6 +467,7 @@ const AppState = (props) => {
       value={{
         login,
         isAuthenticated,
+        setIsAuthenticated,
         token,
         admin,
         register,
