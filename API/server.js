@@ -37,7 +37,7 @@ app.use('/api/prompts',promptsRouter)
 
 // payment router
 app.use('/api/payment',paymentRouter)
-mongoose.connect("mongodb+srv://paurasmore22:FceTTlbqxO7vmKXz@nutribot.zchqk.mongodb.net/",{
+mongoose.connect(process.env.MONGO_URI,{
   dbName:"Nutibot"
 }).then(()=>{
   console.log("Connected Sucessfully !")

@@ -31,6 +31,7 @@ import AllOrdersAdmin from "./Components/Admin/AllOrdersAdmin";
 import AboutPage from "./Components/AboutPage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ProtectedRoute from "./Components/ProtectedRoute"
 function App() {
   return (
     <>
@@ -42,24 +43,150 @@ function App() {
           <Route path="/landingpage" element={<LangingPage />}></Route>
           <Route path="/register" element={<Register />} />
           <Route path="/login" index element={<Login />} />
-          <Route path="/" element={<MainPage />} />
-          <Route path="/time" element={<Timeinput />} />
-          <Route path="/ingridients" element={<Ingridients />} />
-          <Route path="/healthstatus" element={<HealthStatus />} />
-          <Route path="/cookingstyle" element={<CookinsStyle />} />
-          <Route path="/generatedRecipe" element={<GeneratedRecipe />} />
-          <Route path="/subscriptions" element={<Subscriptions />} />
-          <Route path="/recipehistory" element={<RecipeHistory />} />
-          <Route path="/orderhistory" element={<OrderHistory />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/recipedetails/:recipe_id" element={<Recipedetails />} />
-          <Route path="/nutrimeals" element={<NutrimealsShow />} />
-          <Route path="/product/:id" element={<MealDetails />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/shipping" element={<Shipping />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/orderconfirmation" element={<OrderConfirmation />} />
-          <Route path="/adminallorders" element={<AllOrdersAdmin />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <MainPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/time"
+            element={
+              <ProtectedRoute>
+                <Timeinput />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/ingridients"
+            element={
+              <ProtectedRoute>
+                <Ingridients />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/healthstatus"
+            element={
+              <ProtectedRoute>
+                <HealthStatus />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/cookingstyle"
+            element={
+              <ProtectedRoute>
+                <CookinsStyle />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/generatedRecipe"
+            element={
+              <ProtectedRoute>
+                <GeneratedRecipe />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/subscriptions"
+            element={
+              <ProtectedRoute>
+                <Subscriptions />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/recipehistory"
+            element={
+              <ProtectedRoute>
+                <RecipeHistory />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/orderhistory"
+            element={
+              <ProtectedRoute>
+                <OrderHistory />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/recipedetails/:recipe_id"
+            element={
+              <ProtectedRoute>
+                <Recipedetails />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/nutrimeals"
+            element={
+              <ProtectedRoute>
+                <NutrimealsShow />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/product/:id"
+            element={
+              <ProtectedRoute>
+                <MealDetails />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <ProtectedRoute>
+                <Cart />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/shipping"
+            element={
+              <ProtectedRoute>
+                <Shipping />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/orderconfirmation"
+            element={
+              <ProtectedRoute>
+                <OrderConfirmation />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/adminallorders"
+            element={
+              <ProtectedRoute>
+                <AllOrdersAdmin />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
       </BrowserRouter>

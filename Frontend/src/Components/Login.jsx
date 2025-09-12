@@ -5,7 +5,7 @@ import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 const Login = () => {
-  const { setToken } = useContext(AppContext);
+  const { setToken,setIsAuthenticated } = useContext(AppContext);
   const navigate = useNavigate();
   const [googleMail, setGoogleMail] = useState();
   const [googleName, setGoogleName] = useState();
@@ -27,8 +27,12 @@ const Login = () => {
       );
       console.log(response.data);
       const { token } = await response.data;
-      localStorage.setItem("token", token);
+      // localStorage.setItem("token", token);
+      // localStorage.setItem("IsAuthenticated", "true");
       setToken(token);
+      setIsAuthenticated(true)
+      localStorage.setItem("token", token);
+      localStorage.setItem("IsAuthenticated", "true");
       console.log("Login successful with Google. Token:", token);
       navigate("/");
 
@@ -52,7 +56,7 @@ const Login = () => {
     setUsername("");
     setPassword("");
     console.log(result);
-    if (result.sucess) {
+    if (result.success) { 
       navigate("/");
     }
   };
